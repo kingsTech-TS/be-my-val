@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Fireworks from "@/components/animations/Fireworks";
 import FloatingHearts from "@/components/animations/FloatingHearts";
