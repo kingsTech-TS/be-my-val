@@ -96,31 +96,31 @@ const ProposalPage: React.FC<ProposalPageProps> = ({ onYes, onNo }) => {
       <motion.div className="max-w-xl mx-auto w-full relative z-10">
         {/* The Invitation Card */}
         <motion.div
-          className="glass-card rounded-4xl p-10 md:p-14 shadow-[0_20px_50px_rgba(0,0,0,0.1)] border-white/60 relative overflow-hidden"
+          className="glass-card rounded-3xl sm:rounded-4xl p-6 sm:p-10 md:p-14 shadow-[0_20px_50px_rgba(0,0,0,0.1)] border-white/60 relative overflow-hidden mx-2 sm:mx-0"
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           {/* Reactive Teddy Bear */}
-          <div className="absolute -top-12 -right-8 w-32 h-32 md:w-40 md:h-40 opacity-80 pointer-events-none transform rotate-12">
+          <div className="absolute -top-10 -right-6 w-24 h-24 sm:-top-12 sm:-right-8 sm:w-32 sm:h-32 md:w-40 md:h-40 opacity-80 pointer-events-none transform rotate-12">
             <TeddyBear variant="blushing" />
           </div>
 
           {/* Card Content */}
           <div className="text-center relative z-10">
             <motion.div
-              className="mb-10 text-accent text-3xl"
+              className="mb-8 sm:mb-10 text-accent text-2xl sm:text-3xl"
               animate={{ scale: [1, 1.1, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
               ❣
             </motion.div>
 
-            <div className="space-y-6 mb-14">
+            <div className="space-y-4 sm:space-y-6 mb-10 sm:mb-14">
               {textLines.map((line, i) => (
                 <motion.p
                   key={i}
-                  className="text-2xl md:text-3xl font-serif font-bold text-foreground leading-tight"
+                  className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-foreground leading-tight"
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
@@ -135,7 +135,7 @@ const ProposalPage: React.FC<ProposalPageProps> = ({ onYes, onNo }) => {
 
             {/* Separator */}
             <motion.div
-              className="h-px w-24 bg-linear-to-r from-transparent via-accent/50 to-transparent mx-auto mb-14"
+              className="h-px w-20 sm:w-24 bg-linear-to-r from-transparent via-accent/50 to-transparent mx-auto mb-10 sm:mb-14"
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ delay: 1.5, duration: 1 }}

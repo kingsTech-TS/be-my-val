@@ -31,7 +31,7 @@ const CelebrationPage: React.FC<CelebrationPageProps> = ({ onReplay }) => {
 
       {/* Main content */}
       <motion.div
-        className="max-w-4xl mx-auto text-center relative z-20"
+        className="max-w-4xl mx-auto text-center relative z-20 px-4 sm:px-6"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
@@ -41,18 +41,18 @@ const CelebrationPage: React.FC<CelebrationPageProps> = ({ onReplay }) => {
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="mb-12"
+          className="mb-10 md:mb-12"
         >
-          <motion.h1 className="font-serif text-6xl md:text-8xl font-bold bg-linear-to-b from-primary via-primary to-accent bg-clip-text text-transparent mb-6 py-2">
+          <motion.h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold bg-linear-to-b from-primary via-primary to-accent bg-clip-text text-transparent mb-6 py-2 leading-tight">
             I Knew You'd Say Yes!
           </motion.h1>
-          <p className="text-xl md:text-2xl text-muted-foreground font-light tracking-wide uppercase">
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light tracking-wide uppercase">
             You just made me the happiest person alive
           </p>
         </motion.div>
 
         {/* Centerpiece Teddy Bears */}
-        <div className="flex justify-center items-end gap-12 md:gap-24 mb-16 flex-wrap">
+        <div className="flex justify-center items-end gap-8 sm:gap-12 md:gap-24 mb-12 md:mb-16 flex-wrap">
           <motion.div
             initial={{ opacity: 0, x: -100, rotate: -10 }}
             animate={{ opacity: 1, x: 0, rotate: 0 }}
@@ -65,8 +65,10 @@ const CelebrationPage: React.FC<CelebrationPageProps> = ({ onReplay }) => {
           >
             <div className="relative group">
               <div className="absolute -inset-4 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all duration-700" />
-              <TeddyBear variant="happy" />
-              <p className="mt-4 text-primary font-serif italic text-lg opacity-80">
+              <div className="scale-75 sm:scale-100">
+                <TeddyBear variant="happy" />
+              </div>
+              <p className="mt-4 text-primary font-serif italic text-base sm:text-lg opacity-80">
                 Jumping for Joy!
               </p>
             </div>
@@ -84,8 +86,10 @@ const CelebrationPage: React.FC<CelebrationPageProps> = ({ onReplay }) => {
           >
             <div className="relative group">
               <div className="absolute -inset-4 bg-accent/5 rounded-full blur-2xl group-hover:bg-accent/10 transition-all duration-700" />
-              <TeddyBear variant="blushing" />
-              <p className="mt-4 text-accent font-serif italic text-lg opacity-80">
+              <div className="scale-75 sm:scale-100">
+                <TeddyBear variant="blushing" />
+              </div>
+              <p className="mt-4 text-accent font-serif italic text-base sm:text-lg opacity-80">
                 So Happy I'm Blushing...
               </p>
             </div>
@@ -94,18 +98,18 @@ const CelebrationPage: React.FC<CelebrationPageProps> = ({ onReplay }) => {
 
         {/* Celebration text card */}
         <motion.div
-          className="glass-card max-w-2xl mx-auto rounded-3xl p-10 mb-12 shadow-inner"
+          className="glass-card max-w-2xl mx-auto rounded-3xl p-6 sm:p-10 mb-10 md:mb-12 shadow-inner"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.8, duration: 0.8 }}
         >
-          <p className="text-2xl md:text-3xl font-serif text-foreground mb-6 leading-relaxed">
+          <p className="text-xl sm:text-2xl md:text-3xl font-serif text-foreground mb-6 leading-relaxed">
             {
               "I can't wait to spend every moment of Valentine's Day with you. You are my everything."
             }
           </p>
 
-          <div className="flex justify-center gap-6 text-5xl">
+          <div className="flex justify-center gap-4 sm:gap-6 text-4xl sm:text-5xl">
             {["❤️", "💖", "✨"].map((emoji, i) => (
               <motion.span
                 key={i}
@@ -141,7 +145,7 @@ const CelebrationPage: React.FC<CelebrationPageProps> = ({ onReplay }) => {
           <Button
             onClick={onReplay}
             size="lg"
-            className="bg-transparent hover:bg-primary/5 text-primary border-2 border-primary/20 rounded-full px-12 py-8 text-xl font-medium transition-all duration-300 active:scale-95"
+            className="bg-transparent hover:bg-primary/5 text-primary border-2 border-primary/20 rounded-full px-8 sm:px-12 py-6 sm:py-8 text-lg sm:text-xl font-medium transition-all duration-300 active:scale-95"
           >
             Relive the Magic ✨
           </Button>

@@ -74,17 +74,17 @@ const IntroPage: React.FC<IntroPageProps> = ({ onContinue }) => {
       </div>
 
       <motion.div
-        className="max-w-3xl mx-auto text-center relative z-10"
+        className="max-w-3xl mx-auto text-center relative z-10 px-6 sm:px-8"
         variants={containerVariants}
       >
         {/* Animated Teddy Bear Entrance */}
-        <motion.div className="mb-8" variants={itemVariants}>
+        <motion.div className="mb-6 md:mb-8" variants={itemVariants}>
           <TeddyBear variant="happy" />
         </motion.div>
 
         {/* Title */}
         <motion.h1
-          className="font-serif text-6xl md:text-8xl font-bold bg-linear-to-b from-primary to-primary/70 bg-clip-text text-transparent mb-6 tracking-tight"
+          className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold bg-linear-to-b from-primary to-primary/70 bg-clip-text text-transparent mb-6 tracking-tight leading-tight"
           variants={itemVariants}
         >
           A Special Moment
@@ -92,7 +92,7 @@ const IntroPage: React.FC<IntroPageProps> = ({ onContinue }) => {
 
         {/* Subtitle */}
         <motion.p
-          className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed font-sans font-light"
+          className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed font-sans font-light"
           variants={itemVariants}
         >
           I have something I've been wanting to ask you. Something that means
@@ -101,12 +101,12 @@ const IntroPage: React.FC<IntroPageProps> = ({ onContinue }) => {
 
         {/* Decorative Divider */}
         <motion.div
-          className="flex items-center justify-center gap-4 mb-12"
+          className="flex items-center justify-center gap-4 mb-10 md:mb-12"
           variants={itemVariants}
         >
-          <div className="h-px w-20 bg-linear-to-r from-transparent to-accent" />
+          <div className="h-px w-12 sm:w-20 bg-linear-to-r from-transparent to-accent" />
           <div className="text-accent">✦</div>
-          <div className="h-px w-20 bg-linear-to-l from-transparent to-accent" />
+          <div className="h-px w-12 sm:w-20 bg-linear-to-l from-transparent to-accent" />
         </motion.div>
 
         {/* CTA Button */}
@@ -114,7 +114,7 @@ const IntroPage: React.FC<IntroPageProps> = ({ onContinue }) => {
           <Button
             size="lg"
             onClick={onContinue}
-            className="bg-primary hover:bg-primary/90 text-white rounded-full px-12 py-8 text-xl font-medium shadow-[0_10px_30px_rgba(196,30,58,0.3)] hover:shadow-[0_15px_40px_rgba(196,30,58,0.4)] transition-all duration-300 group"
+            className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 sm:px-12 py-6 sm:py-8 text-lg sm:text-xl font-medium shadow-[0_10px_30px_rgba(196,30,58,0.3)] hover:shadow-[0_15px_40px_rgba(196,30,58,0.4)] transition-all duration-300 group"
           >
             Open My Heart
             <motion.span
